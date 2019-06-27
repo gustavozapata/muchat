@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap");
+
+:root {
+  --verde: #0e4039;
+  --verdeclaro: #19cfb6;
+  --verdeoscuro: #021a17;
+  --magenta: #f35252;
+  --amarillo: #f3e411;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: var(--verde);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  color: var(--magenta);
+  font-size: 2em;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h2 {
+  color: white;
+  font-weight: 900;
+  font-size: 1.7em;
+  background-color: var(--verde);
+  margin: -20px 0 0 30px;
+  width: 90px;
+  padding-left: 10px;
+}
+main {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  margin: -220px 0 0 -150px;
+  /* border: 1px solid red; */
+}
+.status {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#statusText {
+  font-size: 0.8em;
+  color: var(--verdeclaro);
+  font-weight: bold;
+  margin: 8px;
+}
+#statusIcon {
+  font-size: 2em;
+  margin: 1px;
+}
+#status {
+  color: var(--verdeclaro);
+}
+.login {
+  border: 2px solid white;
+  width: 90%;
+  margin: 20px auto;
+}
+form {
+  text-align: center;
+}
+form label {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin: 20px auto 3px -120px;
+  display: inline-block;
+}
+.input-text {
+  width: 200px;
+  height: 28px;
+  background-color: transparent;
+  border: 2px solid var(--magenta);
+  color: var(--amarillo);
+  padding-left: 6px;
+  font-weight: 600;
+  font-size: 0.95em;
+  font-family: "Montserrat", sans-serif;
+}
+input[type="submit"] {
+  background-color: var(--magenta);
+  color: white;
+  width: 90px;
+  padding: 2px 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  margin: 25px auto;
+  -webkit-appearance: none;
+}
+.signup {
+  text-align: center;
+}
+.signup p {
+  color: var(--verdeoscuro);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.signup a {
+  color: var(--verdeclaro);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+footer p {
+  color: var(--verdeoscuro);
+  position: static;
+  font-weight: 700;
+  font-size: 0.85em;
+  margin: 5px auto;
+}
+
+footer p a {
+  color: var(--verdeoscuro);
+}
+
+@media only screen and (max-width: 290px) {
+  .login {
+    width: 210px;
+  }
+  .input-text {
+    width: 160px;
+  }
+  form label {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-height: 570px) {
+  main {
+    margin-top: -170px;
+  }
+  footer p {
+    margin: 0;
+    font-size: 0.6em;
+  }
+  input[type="submit"] {
+    margin: 15px auto;
+  }
+  .status {
+    margin-bottom: 10px;
+  }
+  #statusText {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-height: 470px) {
+  .status {
+    display: none;
+  }
+  main {
+    margin-top: -140px;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  h1 {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -50px;
+    top: 35%;
+  }
+  footer {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-height: 350px) {
+  main {
+    margin-top: -160px;
+  }
+}
+@media only screen and (max-width: 355px) and (max-height: 400px) {
+  h1 {
+    transform: rotate(0deg);
+    left: 10px;
+    top: 0;
+    margin-top: 8px;
+    font-size: 1.1em;
+  }
+}
