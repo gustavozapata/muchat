@@ -85,6 +85,9 @@ main {
   font-weight: 600;
   z-index: 1;
 }
+#elchat input:focus {
+  outline: none;
+}
 #elchat span {
   flex-basis: 25%;
   display: inline-block;

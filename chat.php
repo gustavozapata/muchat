@@ -13,10 +13,10 @@
     <header>
       <section class="section-header">
         <div class="logout">
-          <a id="arrow-a" href="logout.php">
+          <a id="arrow-a" href="./controller/logout.php">
             <img src="./images/arrow.png" alt="Back Arrow Image" />
           </a>
-          <a href="logout.php">Log-out</a>
+          <a href="./controller/logout.php">Log-out</a>
         </div>
         <div class="profile">
           <h2>ZA-QU</h2>
