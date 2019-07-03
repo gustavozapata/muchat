@@ -1,5 +1,8 @@
 # muchat
 Messaging Progressive Web App (PWA) built using the LAMP stack
 
-## Designed and Developed by
+![](images/Samples/img1.png)
+![](images/Samples/img2.png)
+
+### Designed and Developed by
 https://gustavozapata.me
