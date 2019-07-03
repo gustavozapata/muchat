@@ -65,3 +65,25 @@ function autoScrollChat() {
     1000
   );
 }
+
+//COMING SOON
+//camera
+$("#elchat img").on("click", function() {
+  $(".coming-soon").toggleClass("coming-soon-open");
+  var posY = $(this).offset().top;
+  var posX = $(this).offset().left;
+  $(".coming-soon").css({
+    top: posY - 25 + "px",
+    left: posX - 70 + "px"
+  });
+});
+
+$(".profile-image").on("click", function() {
+  $(".coming-soon").toggleClass("coming-soon-open");
+  var posY = $(this).offset().top;
+  var posX = $(this).offset().left;
+  $(".coming-soon").css({
+    top: posY + 40 + "px",
+    left: posX - 70 + "px"
+  });
+});

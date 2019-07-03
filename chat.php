@@ -26,6 +26,12 @@
         </div>
       </section>
     </header>
+
+    <!-- coming soon -->
+    <div class="coming-soon">
+      <p>Coming soon!</p>
+    </div>
+    
     <main>
       <section class="chat-log">
         <?php foreach($chat as $msg): ?>

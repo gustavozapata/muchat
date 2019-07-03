@@ -83,6 +83,7 @@ main {
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  z-index: 1;
 }
 #elchat span {
   flex-basis: 25%;
