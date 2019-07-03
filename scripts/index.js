@@ -1,7 +1,3 @@
-$("#login").on("click", function(e) {
-  // e.preventDefault();
-});
-
 //COMING SOON
 //signup
 $(".signup a").on("click", function() {

@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once "DataAccess.php";
+require_once "./model/DataAccess.php";
 
 if(isset($_POST["username"])){
     $username = $_REQUEST["username"];

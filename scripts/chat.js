@@ -4,7 +4,7 @@ autoScrollChat();
 $("#elchat form").submit(function() {
   var message = $("#message").val();
 
-  $.post("send.php", { message: message }, function(data) {
+  $.post("./controller/send.php", { message: message }, function(data) {
     $(".chat-log").append(
       "<div class='yo'>" +
         "<p class='user'>" +
@@ -32,7 +32,7 @@ setInterval(fetchNewMessage, 5000);
 
 //FETCH NEW MESSAGE(S)
 function fetchNewMessage() {
-  $.get("fetch.php", function(data) {
+  $.get("./controller/fetch.php", function(data) {
     if (data != null) {
       for (var i = 0; i < data.length; i++) {
         $(".chat-log").append(
