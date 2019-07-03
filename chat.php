@@ -29,7 +29,8 @@
     <main>
       <section class="chat-log">
         <?php foreach($chat as $msg): ?>
-        <div class="<?php $msg->user == $_SESSION["id"] ? yo : null ?>">
+        <?php $isYo = $msg->user == $_SESSION["id"] ? "yo" : null ?>
+        <div class="<?= $isYo ?>">
           <p class="user"><?= $msg->firstName . " " . $msg->lastName ?></p>
           <p class="time"><?= $msg->time ?></p>
           <p class="message"><?= $msg->message ?></p>
