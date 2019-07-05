@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Server-Sent Event</title>
+  </head>
+  <body>
+    <h1>Getting server updates</h1>
+    <div id="result"></div>
+    <script>
+      if (typeof EventSource !== "undefined") {
+        var source = new EventSource("serversent.php");
+        source.onmessage = function(e) {
+          document.getElementById("result").innerHTML += e.data + "<br>";
+        };
+        source.onopen = function() {
+          // document.getElementById("result").innerHTML += "<p>abierta</p>";
+        };
+      } else {
+        document.getElementById("result").innerHTML =
+          "Sorry, your browser does not support server-sent events...";
+      }
+    </script>
+  </body>
+</html>

@@ -10,6 +10,7 @@ if(isset($_POST["username"])){
     if(DataAccess::getInstance()->checkLogin($username, $password)){
         $_SESSION["username"] = $username;
         $chat = DataAccess::getInstance()->loadChatHistory();
+        $users = DataAccess::getInstance()->loadUsers();
         require_once "chat.php";
     } else {
         require_once "index.html";

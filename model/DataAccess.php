@@ -29,9 +29,26 @@ class DataAccess {
         if($statement->rowCount() > 0){
             $result = $statement->fetch(PDO::FETCH_ASSOC);
             $_SESSION["id"] = $result["id"];
+            $this->userOnline($_SESSION["id"]);
             return true;
         }
         return false;
+    }
+
+    function userOnline($id){
+        $connection = $this->getConnection();
+        $statement = $connection->prepare("UPDATE users SET online = true WHERE id = ?");
+        $statement->execute([$id]);
+    }
+    function userOffline($id){
+        $connection = $this->getConnection();
+        $statement = $connection->prepare("UPDATE users SET online = false WHERE id = ?");
+        $statement->execute([$id]);
+    }
+    function isTyping($id, $v){
+        $connection = $this->getConnection();
+        $statement = $connection->prepare("UPDATE users SET typing = ? WHERE id = ?");
+        $statement->execute([$v, $id]);
     }
 
     function loadChatHistory(){
@@ -39,6 +56,13 @@ class DataAccess {
         $statement = $connection->prepare("SELECT * FROM users INNER JOIN log ON users.id = log.user ORDER BY log.id");
         $statement->execute();
         $_SESSION["lastInsertedId"] = $this->getLastMessageId();
+        return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    function loadUsers() {
+        $connection = $this->getConnection();
+        $statement = $connection->prepare("SELECT * FROM users");
+        $statement->execute();
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
 
@@ -70,8 +94,22 @@ class DataAccess {
 
     function loadNewMessage(){
         $connection = $this->getConnection();
-    $statement = $connection->prepare("SELECT * FROM users INNER JOIN log ON users.id = log.user WHERE log.id = {$_SESSION['lastInsertedId']}");
+        $statement = $connection->prepare("SELECT * FROM users INNER JOIN log ON users.id = log.user WHERE log.id = {$_SESSION['lastInsertedId']}");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    //EVENT SOURCE 
+    function serverData(){
+        $connection = $this->getConnection();
+        $statement = $connection->prepare("SELECT message FROM log LIMIT 1");
+        $statement->execute();
+        // return $statement->fetchColumn();
+        $statement->fetchColumn();
+        return "ola pues";
+    }
+    function theTime(){
+        $time = date('r');
+        return "yeah!";
     }
 }

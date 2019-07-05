@@ -27,6 +27,15 @@
       </section>
     </header>
 
+    <!-- USER ONLINE/OFFLINE -->
+    <div class="users-connected">
+      <div>
+        <?php foreach($users as $user): ?>
+        <p data-user="<?= $user->id ?>"><span <?php echo $user->online ? 'class="connected" data-on="1"' : 'data-on="0"' ?>></span><?= $user->username ?></p>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
     <!-- coming soon -->
     <div class="coming-soon">
       <p>Coming soon!</p>
@@ -35,8 +44,7 @@
     <main>
       <section class="chat-log">
         <?php foreach($chat as $msg): ?>
-        <?php $isYo = $msg->user == $_SESSION["id"] ? "yo" : null ?>
-        <div class="<?= $isYo ?>">
+        <div <?php echo $msg->user == $_SESSION["id"] ? 'class="yo"' : null ?>>
           <p class="user"><?= $msg->firstName . " " . $msg->lastName ?></p>
           <p class="time"><?= $msg->time ?></p>
           <p class="message"><?= $msg->message ?></p>
