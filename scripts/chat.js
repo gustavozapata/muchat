@@ -98,18 +98,6 @@ function isUserOnline() {
   });
 }
 
-// function isTyping(status) {
-//   var users = document.querySelectorAll(".users-connected p");
-//   for (var i = 0; i < status.length; i++) {
-//     if (status[i].typing == "1") {
-//       if (status[i].id == users[i].dataset.user) {
-//         console.log(status[i].username + " is typing");
-//         $(".users-connected p").text("typing");
-//       }
-//     }
-//   }
-// }
-
 //USER IS TYPING
 $("#message").on("keyup", function(e) {
   if (
