@@ -89,7 +89,7 @@
     <script src="./scripts/index.js"></script>
     <script>
       //PWA SERVICE WORKER
-      window.addEventListener("load", async e => {
+      window.addEventListener("load", e => {
         if ("serviceWorker" in navigator) {
           try {
             navigator.serviceWorker.register("serviceWorker.js");
