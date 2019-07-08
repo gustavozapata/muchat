@@ -16,10 +16,12 @@ self.addEventListener("install", async event => {
 self.addEventListener("fetch", event => {
   const req = event.request;
   const url = new URL(req.url);
-  if (url.origin == location.origin) {
-    event.respondWith(cacheFirst(req));
-  } else {
-    event.respondWith(networkFirst(req));
+  if (!(event.request.url.indexOf("http") === 0)) {
+    if (url.origin == location.origin) {
+      event.respondWith(cacheFirst(req));
+    } else {
+      event.respondWith(networkFirst(req));
+    }
   }
 });
 
