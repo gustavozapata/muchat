@@ -1,11 +1,11 @@
 const staticAssets = [
   "./",
-  "/styles/index.css",
-  "/styles/chat.css",
-  "/scripts/index.js",
-  "/scripts/chat.js",
-  "/images/arrow.png",
-  "/images/camera.png"
+  "./styles/index.css",
+  "./styles/chat.css",
+  "./scripts/index.js",
+  "./scripts/chat.js",
+  "./images/arrow.png",
+  "./images/camera.png"
 ];
 
 self.addEventListener("install", async event => {
