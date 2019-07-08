@@ -1,4 +1,0 @@
-[04-Jul-2019 15:00:40 America/New_York] PHP Warning:  require_once(database.php): failed to open stream: No such file or directory in /home/fundyetb/public_html/work/muchat/model/DataAccess.php on line 8
-[04-Jul-2019 15:00:40 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'database.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/fundyetb/public_html/work/muchat/model/DataAccess.php on line 8
-[04-Jul-2019 15:01:43 America/New_York] PHP Warning:  require_once(database.php): failed to open stream: No such file or directory in /home/fundyetb/public_html/work/muchat/model/DataAccess.php on line 8
-[04-Jul-2019 15:01:43 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'database.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/fundyetb/public_html/work/muchat/model/DataAccess.php on line 8
