@@ -5,7 +5,7 @@
   "background_color": "#0e4039",
   "display": "standalone",
   "orientation": "portrait",
-  "Scope": "/",
+  "Scope": "/work/muchat",
   "start_url": "/work/muchat",
   "icons": [
     {
